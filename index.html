@@ -3,13 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamically called API data and Create HTML Elements</title>
+    <title>Dynamically Called API Data</title>
     <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-    <div id="user-list">
-
-    </div>
+    <div id="user-list" class="container"></div>
 
     <script>
         fetch("https://jsonplaceholder.typicode.com/users")
@@ -17,19 +15,16 @@
         .then(data => showUserNames(data));
 
         function showUserNames(data){
-            // console.log(data);
             let lists = '';
             data.forEach(element => {
-                lists = lists + `
+                lists += `
                     <div class="user">
                         <h2>${element.name}</h2>
                         <p>Email: ${element.email}</p>
                         <p>Phone: ${element.phone}</p>
                     </div>
-                `
+                `;
             });
-            // console.log(lists);
-
             const ul = document.getElementById("user-list");
             ul.innerHTML = lists;
         }
