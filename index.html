@@ -12,12 +12,17 @@
     </ul>
 
     <script>
-        fetch("https://jsonplaceholder.typecode.com/users")
+        fetch("https://jsonplaceholder.typicode.com/users")
         .then(res => res.json())
         .then(data => showUserNames(data));
 
         function showUserNames(data){
-            console.log(data);
+            // console.log(data);
+            let lists = '';
+            data.forEach(element => {
+                lists = lists + `<li>${element.name}</li>`
+            });
+            console.log(lists);
         }
     </script>
 </body>
