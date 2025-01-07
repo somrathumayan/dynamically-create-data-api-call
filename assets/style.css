@@ -1,0 +1,19 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: peru;
+
+}
+.user{
+    background-color: red;
+    width: 15%;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    float: left;
+    border-radius: 12px;
+    color: #FFF;
+}
