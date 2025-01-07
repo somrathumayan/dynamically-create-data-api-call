@@ -22,7 +22,10 @@
             data.forEach(element => {
                 lists = lists + `<li>${element.name}</li>`
             });
-            console.log(lists);
+            // console.log(lists);
+
+            const ul = document.getElementById("user-list");
+            ul.innerHTML = lists;
         }
     </script>
 </body>
